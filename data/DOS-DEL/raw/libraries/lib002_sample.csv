@@ -1,0 +1,5 @@
+structure
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3ccc(CC(=O)O)cc3)cc2)CN1Cc1cnc2[nH]ccc2c1
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3cnc(N4CCOCC4)nc3)cc2)CN1Cc1cnc2[nH]ccc2c1
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3ccc(CNC(C)=O)cc3)cc2)CN1Cc1cnc2[nH]ccc2c1
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3cccc(C(=O)N(C)OC)c3)cc2)CN1Cc1cnc2[nH]ccc2c1
