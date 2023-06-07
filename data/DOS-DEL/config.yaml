@@ -1,0 +1,26 @@
+# Preprocessing configuration file for DOS-DEL data
+data_path: "raw"
+output_path: "output"
+sublibrary:
+  - "002"
+  - "004"
+  - "005"
+  - "006"
+  - "007"
+  - "100"
+experimental_condition:
+  - "CK1a"
+  - "CK1a_inh"
+  - "CK1d"
+  - "CK1d_inh"
+sample_to_exp_condition:
+  788: "blank"
+  789: "blank"
+  790: "CK1a"
+  791: "CK1a"
+  792: "CK1a_inh"
+  793: "CK1a_inh"
+  794: "CK1d"
+  795: "CK1d"
+  796: "CK1d_inh"
+  797: "CK1d_inh"
