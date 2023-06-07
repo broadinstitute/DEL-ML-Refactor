@@ -1,0 +1,5 @@
+SMILES,sublibrary,library.name,CK1a_er,CK1a_er_ub,CK1a_er_lb,CK1a_hit_counts_0,CK1a_hit_counts_1,CK1a_inh_er,CK1a_inh_er_ub,CK1a_inh_er_lb,CK1a_inh_hit_counts_0,CK1a_inh_hit_counts_1,CK1d_er,CK1d_er_ub,CK1d_er_lb,CK1d_hit_counts_0,CK1d_hit_counts_1,CK1d_inh_er,CK1d_inh_er_ub,CK1d_inh_er_lb,CK1d_inh_hit_counts_0,CK1d_inh_hit_counts_1,blank_hit_counts_0,blank_hit_counts_1,CompoundIndex
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3ccc(CC(=O)O)cc3)cc2)CN1Cc1cnc2[nH]ccc2c1,002,002,0.6,1.47,0.05,1,2,0.45,1.06,0.03,1,1,1.15,2.97,0.12,1,4,0.93,2.36,0.09,2,2,0,0,001.001.001
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3cnc(N4CCOCC4)nc3)cc2)CN1Cc1cnc2[nH]ccc2c1,002,002,,,,0,0,,,,0,0,0.29,0.59,0.01,0,1,0.29,0.59,0.01,0,1,0,0,001.001.002
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3ccc(CNC(C)=O)cc3)cc2)CN1Cc1cnc2[nH]ccc2c1,002,002,0.24,0.49,0.0,0,1,0.26,0.53,0.0,1,0,1.79,4.74,0.22,4,4,0.72,1.77,0.06,2,1,0,0,001.001.003
+[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3cccc(C(=O)N(C)OC)c3)cc2)CN1Cc1cnc2[nH]ccc2c1,002,002,1.12,2.94,0.13,5,1,0.26,0.53,0.0,1,0,2.0,5.34,0.25,5,4,0.72,1.77,0.06,2,1,0,0,001.001.004
