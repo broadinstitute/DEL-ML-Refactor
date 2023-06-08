@@ -18,7 +18,6 @@ def load_library(config):
 
     lib_dfs = pd.concat(lib_dfs)
     lib_dfs.rename(columns={'structure': 'SMILES'}, inplace=True)
-    #lib_dfs.to_csv(os.path.join(output_path_preprocessed, "lib_dfs.csv"), index=False)
     return lib_dfs
 
 
@@ -74,7 +73,6 @@ def merge_sample_and_experiment(config, all_sample_df, output_path):
         exp_cond_df_full['hit_counts_0'] = sample_df_0['value']
         exp_cond_df_full['hit_counts_1'] = sample_df_1['value']
         tmp.append(exp_cond_df_full)
-        exp_cond_df_full.to_csv(os.path.join(output_path, f'{exp_cond}.csv'), index=False)
 
     # Concate the results for all experiment conditions
     all_exp_cond_df = pd.concat(tmp)
@@ -110,17 +108,14 @@ if __name__ == "__main__":
     # Step 1: Load library
     print("Loading library...")
     lib_dfs = load_library(config)
-    lib_dfs.to_csv(os.path.join(output_path_preprocessed, "lib_dfs.csv"), index=False)
 
     # Step2: Load sample
     print("Loading sample...")
     all_sample_df = load_sample(config)
-    all_sample_df.to_csv(os.path.join(output_path_preprocessed, "all_sample.csv"), index=False)
 
     # Step 3: Merge sample with screeing results from different experiment conditions and save the merged results individually
     print("Merging sample and experiment...")
     all_exp_cond_df = merge_sample_and_experiment(config, all_sample_df, output_path_preprocessed)
-    all_exp_cond_df.to_csv(os.path.join(output_path_preprocessed, "all_exp_cond.csv"), index=False)
     smile2compoundIndex = all_exp_cond_df[['SMILES', 'CompoundIndex']].set_index('SMILES')['CompoundIndex'].to_dict()
 
     # Step 4: Merge the library and all readouts of all experiment conditions (except blank)
