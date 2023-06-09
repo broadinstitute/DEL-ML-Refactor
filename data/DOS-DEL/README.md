@@ -35,3 +35,11 @@ It produce `preprocessed.csv` under the folder `outputs/preprocessed`. The meani
 - `{experimental_condition_code}_lb`: lower bound of `{experimental_condition_code}_er`
 - `{experimental_condition_code}_hit_count_{number of run}`: The readout of each run in the given experimental condition. The number of run are either 0 or 1
 - blank_hit_count_{number of run}: The readout of each run in the blank condition (i.e., no target). The number of run are either 0 or 1
+
+## TODO
+Higher priority
+- [ ] Polish up the document so far till the preprocessing step (Sumaiya)
+- [ ] Dive into the analysis part of DOS-DEL-Analysis.ipynb (Kuan)
+
+Lower priority
+- [ ] Explore potential data format (e.g., parquet, cudf) that speeds up the whole preprocessing pipeline. (Kuan)
