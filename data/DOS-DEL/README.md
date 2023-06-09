@@ -4,7 +4,7 @@ This folder contains all data and results related to DOS-DEL (Diversity Oriented
 
 ## Dataset overview
 The data in `raw` folder contain raw readouts of DOS-DEL library. It contains two sub-folders (`libraries` and `sample`) and several files. In summary, there are 6 sublibraies (002,004,005,006,007,100), each one is screened under 4 experimental conditions (CK1a, CK1a_inh,CK1d and CK1d_inh) and each condition are run two times (results are under `sample`)
-We use lib002 as an example to illustrate the detail of each table (All examples provided here just a sample version. To run the experiment, please refer to **Run experiment** section)
+We use lib002 as an example to illustrate the detail of each table (All examples provided here are sampled version. To run the experiment, please refer to **Run experiment** section)
 
 - `libraries/lib002_sample.csv`: The file contains all SMILES strings of small molecules generated from DEL in sublibaray 002 (column: structure)
 - `samples/run038_samp0000{experimental condition code}_lib002_sample.csv`: These files contain the sequencing readout (columns: value) under different experimental condition. The code of all experimental conditoins are described in `config.yaml` 
