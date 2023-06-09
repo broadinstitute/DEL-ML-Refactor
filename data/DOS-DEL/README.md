@@ -8,7 +8,7 @@ We use lib002 as an example to illustrate the detail of each table (All examples
 
 - `libraries/lib002_sample.csv`: The file contains all SMILES strings of small molecules generated from DEL in sublibaray 002 (column: structure)
 - `samples/run038_samp0000{experimental condition code}_lib002_sample.csv`: These files contain the sequencing readout (columns: value) under different experimental condition. The code of all experimental conditoins are described in `config.yaml` 
-- `{experimental condition code}_lib002_sample.csv`: These files mainly contain the enrichment score and corresponding lowe and upper bound.  The meaning of each column are expplained below
+- `{experimental condition code}_lib002_sample.csv`: These files mainly contain the enrichment score and corresponding lower and upper bound.  The meaning of each column are expplained below
   - `lib_id`: sublibary id (2 in our example)
   - `cycle{x} x=1,2,3`: DOS-DEL is a three-cycle DEL pipeline. The value in the columns represents scaffold used in each synthetic cycle.
   - `ctrl_ct`:
@@ -34,7 +34,7 @@ It produce `preprocessed.csv` under the folder `outputs/preprocessed`. The meani
 - `{experimental_condition_code}_er_ub: upper bound of `{experimental_condition_code}\_er`
 - `{experimental_condition_code}_lb`: lower bound of `{experimental_condition_code}_er`
 - `{experimental_condition_code}_hit_count_{number of run}`: The readout of each run in the given experimental condition. The number of run are either 0 or 1
-- blank_hit_count_{number of run}: The readout of each run in the blank condition (i.e., no target). The number of run are either 0 or 1
+- `blank_hit_count_{number of run}`: The readout of each run in the blank condition (i.e., no target). The number of run are either 0 or 1
 
 ## TODO
 Higher priority
