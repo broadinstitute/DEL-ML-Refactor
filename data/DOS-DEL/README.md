@@ -39,7 +39,9 @@ It produce `preprocessed.csv` under the folder `outputs/preprocessed`. The meani
 ## TODO
 Higher priority
 - [ ] Polish up the document so far till the preprocessing step (Sumaiya)
-- [ ] Dive into the analysis part of DOS-DEL-Analysis.ipynb (Kuan)
+- [x] Split filtering from DOS-DEL-Analysis.ipynb
+- [ ] Split exploratory analysis from DOS-DEL-Analysis.ipynb
+- [ ] Split downsample and clustering analysis from DOS-DEl-Analysis.ipynb
 
 Lower priority
 - [ ] Explore potential data format (e.g., parquet, cudf) that speeds up the whole preprocessing pipeline. (Kuan)
