@@ -30,10 +30,10 @@ python ./preprocessing.py
 It produce `preprocessed.csv` under the folder `outputs/preprocessed`. The meaning of each columns are exaplained below
 - `SMILES`: The SMILES string of the small molecule
 - `sublibrary/library.name`: The id of sublibrary (TODO: Possibily duplicate columns)
-- `{experimental_condition_code}_er`: Enrichment score of the molecule in the given experimental condition
-- `{experimental_condition_code}_er_ub: upper bound of `{experimental_condition_code}\_er`
-- `{experimental_condition_code}_lb`: lower bound of `{experimental_condition_code}_er`
-- `{experimental_condition_code}_hit_count_{number of run}`: The readout of each run in the given experimental condition. The number of run are either 0 or 1
+- `{experimental_condition}_er`: Enrichment score of the molecule in the given experimental condition
+- `{experimental_condition}_er_ub: upper bound of `{experimental_condition}\_er`
+- `{experimental_condition}_lb`: lower bound of `{experimental_condition}_er`
+- `{experimental_condition}_hit_count_{number of run}`: The readout of each run in the given experimental condition. The number of run are either 0 or 1
 - `blank_hit_count_{number of run}`: The readout of each run in the blank condition (i.e., no target). The number of run are either 0 or 1
 
 ## TODO
