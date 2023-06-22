@@ -20,29 +20,39 @@ We use lib002 as an example to illustrate the detail of each table (All examples
 
 ## Run experiments
 ### Step 0: Download the data
-TBD
+The data is downloaded from [here](http://chembio-dev-02:3838/del-app/). (Detail instruction: TBD)
 
 ### Step 1: Preprocessing
 Simply run:
 ```
 python ./preprocessing.py
 ```
-It produce `preprocessed.csv` under the folder `outputs/preprocessed`. The meaning of each columns are exaplained below
+It produces `preprocessed.csv` under the folder `outputs/preprocessed`. The meaning of each columns are exaplained below
 - `SMILES`: The SMILES string of the small molecule
 - `sublibrary/library.name`: The id of sublibrary (TODO: Possibily duplicate columns)
 - `{experimental_condition}_er`: Enrichment score of the molecule in the given experimental condition
-- `{experimental_condition}_er_ub: upper bound of `{experimental_condition}\_er`
+- `{experimental_condition}_er_ub`: upper bound of `{experimental_condition}\_er`
 - `{experimental_condition}_lb`: lower bound of `{experimental_condition}_er`
 - `{experimental_condition}_hit_count_{number of run}`: The readout of each run in the given experimental condition. The number of run are either 0 or 1
 - `blank_hit_count_{number of run}`: The readout of each run in the blank condition (i.e., no target). The number of run are either 0 or 1
 
+### Step 1: Stratifying
+Simply run:
+```
+python ./stratify.py
+```
+The script stratifies the compound by their enrichment scores into three categories, which are allosteric, orthosteric and cryptic binders. It produces `CK1a_orthosteric_153k.csv`, `CK1d_orthosteric_58k.csv`, `CK1a_all_labels.csv` and `CK1d_all_labels.csv`. In this projects, we are only interested in the orthosteric binders for each protein (`*_orthosteric_*.csv`). `*_all_lables.csv` are only used for understanding how the different binder looks like in the libriary. The meaning of columns are the same in the **preprocessing** step.
+
 ## TODO
 Higher priority
 - [ ] Polish up the document so far till the preprocessing step (Sumaiya)
-- [ ] Sorting out the missing code piece that produce effective size fileds in DOS-DEL (Sumaiya and Kuan)
+- [x] Sorting out the missing code piece that produce effective size fileds in DOS-DEL (Sumaiya and Kuan)
 - [ ] Split exploratory analysis from DOS-DEL-Analysis.ipynb
 - [ ] Split downsample and clustering analysis from DOS-DEl-Analysis.ipynb
-- [x] Split filtering from DOS-DEL-Analysis.ipynb
+- [x] Split stratify from DOS-DEL-Analysis.ipynb
 
 Lower priority
 - [ ] Explore potential data format (e.g., parquet, cudf) that speeds up the whole preprocessing pipeline. (Kuan)
+
+## Refactoring issue log
+- 06/21/2023:  Found the supposed primary key (CompoundIndex) is a fake primary key. This issue is highly likely to affect the subsequent analysis since the binder type are stratified by CompoundIndex. The current repo already uses SMILE as PK instead. 
