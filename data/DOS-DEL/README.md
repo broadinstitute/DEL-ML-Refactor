@@ -36,7 +36,7 @@ It produces `preprocessed.csv` under the folder `outputs/preprocessed`. The mean
 - `{experimental_condition}_hit_count_{number of run}`: The readout of each run in the given experimental condition. The number of run are either 0 or 1
 - `blank_hit_count_{number of run}`: The readout of each run in the blank condition (i.e., no target). The number of run are either 0 or 1
 
-### Step 1: Stratifying
+### Step 2: Stratifying
 Simply run:
 ```
 python ./stratify.py
