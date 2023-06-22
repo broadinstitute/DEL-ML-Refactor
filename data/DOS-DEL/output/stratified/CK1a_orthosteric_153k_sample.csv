@@ -1,0 +1,5 @@
+CK1a_hit_counts_0,CK1a_hit_counts_1,CK1a_er,CK1a_er_lb,CK1a_inh_hit_counts_0,CK1a_inh_hit_counts_1,CK1a_inh_er,CK1a_inh_er_lb,CK1d_hit_counts_0,CK1d_hit_counts_1,CK1d_er,CK1d_er_lb,CK1d_inh_hit_counts_0,CK1d_inh_hit_counts_1,CK1d_inh_er,CK1d_inh_er_lb,CompoundIndex,SMILES,library.name,blank_hit_counts_0,blank_hit_counts_1,customlabel
+24,26,8.89,1.27,13,20,6.34,0.89,14,13,5.84,0.82,15,10,5.38,0.75,001.039.046,[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3cncnc3)cc2)CN1Cc1cc(C(=O)O)ccc1O,2,0,0,Orthosteric
+37,28,11.53,1.67,19,30,9.39,1.34,23,25,10.32,1.48,25,22,10.05,1.44,001.045.014,[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3ccc(S(N)(=O)=O)cc3)cc2)CN1Cc1ccc(-c2nn[nH]n2)cc1,2,0,0,Orthosteric
+22,22,7.83,1.12,14,12,5.01,0.7,8,7,3.28,0.44,15,10,5.38,0.75,001.047.091,[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3cn[nH]c3C)cc2)CN1CCC(C)(C)OC,2,0,0,Orthosteric
+22,21,7.65,1.09,19,10,5.58,0.78,7,14,4.56,0.63,12,9,4.53,0.62,001.074.097,[3H]CNC(=O)[C@H]1[C@@H](c2ccc(-c3ccc(CCC(=O)NN)cc3)cc2)CN1S(=O)(=O)c1ccc(C=O)cc1,2,0,0,Orthosteric
