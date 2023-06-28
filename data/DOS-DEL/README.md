@@ -59,9 +59,6 @@ All the output files are stored under `output/lib_stat`.
 
 ## TODO
 Higher priority
-- [ ] Polish up the document so far till the preprocessing step (Sumaiya)
-- [ ] Refacor HitGen analysis
-- [ ] Replacing fingerprint.py with a more general feature extractor by molfeat 
 - [x] Sorting out the missing code piece that produce effective size fileds in DOS-DEL (Sumaiya and Kuan)
 - [x] Split exploratory analysis from DOS-DEL-Analysis.ipynb
 - [x] Split stratify from DOS-DEL-Analysis.ipynb
