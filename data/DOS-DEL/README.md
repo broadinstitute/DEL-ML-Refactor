@@ -41,14 +41,29 @@ Simply run:
 ```
 python ./stratify.py
 ```
-The script stratifies the compound by their enrichment scores into three categories, which are allosteric, orthosteric and cryptic binders. It produces `CK1a_orthosteric_153k.csv`, `CK1d_orthosteric_58k.csv`, `CK1a_all_labels.csv` and `CK1d_all_labels.csv`. In this projects, we are only interested in the orthosteric binders for each protein (`*_orthosteric_*.csv`). `*_all_lables.csv` are only used for understanding how the different binder looks like in the libriary. The meaning of columns are the same in the **preprocessing** step.
+The script stratifies the compound by their enrichment scores into three categories, which are allosteric, orthosteric and cryptic binders. It produces `CK1a_orthosteric_153k.csv`, `CK1d_orthosteric_58k.csv`, `CK1a_all_labels.csv` and `CK1d_all_labels.csv`. In this projects, we are only interested in the orthosteric binders for each protein (`*_orthosteric_*.csv`). `*_all_lables.csv` are only used for understanding how the different binder looks like in the libriary. All the output files are stored under `output/stratified/`. The meaning of columns are the same in the **preprocessing** step.
+
+### Generate statistics for the library
+Simply run:
+```
+python ./statistic.py
+```
+The script will generate the plots for each experiment condition (except the last one):
+  - rawe molecular ratio of each sublibrary for each experiment conditoin 
+  - molecular ratio of each sublibrary after filtering low hit count for each experiment condition
+  - The enrichment ratio and its lower bound of each experiment condition
+  - The quantile table of enrichment ratio and its lower bound for each
+  - The enrichment ratio and its lower bound of binder of interested (orthosteric) for CK1d and CK1a (i.e., experiment we are interested in)
+
+All the output files are stored under `output/lib_stat`.
 
 ## TODO
 Higher priority
 - [ ] Polish up the document so far till the preprocessing step (Sumaiya)
+- [ ] Refacor HitGen analysis
+- [ ] Replacing fingerprint.py with a more general feature extractor by molfeat 
 - [x] Sorting out the missing code piece that produce effective size fileds in DOS-DEL (Sumaiya and Kuan)
-- [ ] Split exploratory analysis from DOS-DEL-Analysis.ipynb
-- [ ] Split downsample and clustering analysis from DOS-DEl-Analysis.ipynb
+- [x] Split exploratory analysis from DOS-DEL-Analysis.ipynb
 - [x] Split stratify from DOS-DEL-Analysis.ipynb
 
 Lower priority
