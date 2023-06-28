@@ -43,7 +43,7 @@ python ./stratify.py
 ```
 The script stratifies the compound by their enrichment scores into three categories, which are allosteric, orthosteric and cryptic binders. It produces `CK1a_orthosteric_153k.csv`, `CK1d_orthosteric_58k.csv`, `CK1a_all_labels.csv` and `CK1d_all_labels.csv`. In this projects, we are only interested in the orthosteric binders for each protein (`*_orthosteric_*.csv`). `*_all_lables.csv` are only used for understanding how the different binder looks like in the libriary. All the output files are stored under `output/stratified/`. The meaning of columns are the same in the **preprocessing** step.
 
-### Generate statistics for the library
+### Step 3: Generate statistics for the library
 Simply run:
 ```
 python ./statistic.py
