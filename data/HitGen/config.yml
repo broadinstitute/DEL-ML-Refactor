@@ -1,0 +1,9 @@
+# Configuration file for HitGen data
+data_path: "raw"
+output_path: "output"
+
+count_threshold: 2.0
+blank_effect_size_threshold: 0.5
+competitive_measure_CK1a: 1.5
+competitive_measure_CK1d: 2.0
+
