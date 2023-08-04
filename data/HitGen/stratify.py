@@ -3,6 +3,13 @@ import pandas as pd
 import copy
 import os
 import yaml
+def filtering(df, condition, count_thresh, blank_thresh, relevant_columns):
+    filtering_col = {'CK1a': 'A counts', 'CK1a-inh': 'A-inh counts', 'CK1d': 'D counts', 'CK1d-inh': 'D-inh counts'}
+    assert condition in filtering_col.keys(), 'condition must be one of {}'.format(filtering_col.keys())
+
+    df_tmp = df[df[filtering_col[condition]] > count_thresh]
+    df_tmp = df_tmp[df_tmp['blank Effect Size'] <= blank_thresh]
+    return df_tmp[relevant_columns]
 
 def label_generation(df_exp, df_exp_inh, relevant_columns, exp_code, config):
     """
@@ -70,17 +77,10 @@ if __name__ == '__main__':
 
     # Filter data
     print('Filtering data...')
-    df_CK1a = molecular_enrichments_df[molecular_enrichments_df['A counts'] > count_thresh]
-    df_CK1a = df_CK1a[df_CK1a['blank Effect Size'] <= blank_effect_size_thresh][relevant_columns]
-
-    df_CK1a_inh = molecular_enrichments_df[molecular_enrichments_df['A-inh counts'] > count_thresh][relevant_columns]
-    df_CK1a_inh = df_CK1a_inh[df_CK1a_inh['blank Effect Size'] <= blank_effect_size_thresh][relevant_columns]
-
-    df_CK1d = molecular_enrichments_df[molecular_enrichments_df['D counts'] > count_thresh]
-    df_CK1d = df_CK1d[df_CK1d['blank Effect Size'] <= blank_effect_size_thresh]
-
-    df_CK1d_inh = molecular_enrichments_df[molecular_enrichments_df['D-inh counts'] > count_thresh]
-    df_CK1d_inh = df_CK1d_inh[df_CK1d_inh['blank Effect Size'] <= blank_effect_size_thresh]
+    df_CK1a = filtering(molecular_enrichments_df, 'CK1a', count_thresh, blank_effect_size_thresh, relevant_columns)
+    df_CK1a_inh = filtering(molecular_enrichments_df, 'CK1a-inh', count_thresh, blank_effect_size_thresh, relevant_columns)
+    df_CK1d = filtering(molecular_enrichments_df, 'CK1d', count_thresh, blank_effect_size_thresh, relevant_columns)
+    df_CK1d_inh = filtering(molecular_enrichments_df, 'CK1d-inh', count_thresh, blank_effect_size_thresh, relevant_columns)
 
     # Stratify data into three major categories: Allosteric, Orthosteric, and Cryptic
     # The purpose of CK1x exclusive competitive is unclear. feel free to leave them out
