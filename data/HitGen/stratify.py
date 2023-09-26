@@ -67,21 +67,20 @@ if __name__ == '__main__':
     print('Loading data...')
     molecular_enrichments_df = pd.read_csv(os.path.join(config['data_path'], 'merged_molecule_enrichments.csv'))
     molecular_enrichments_df.rename(columns={'product_smiles': 'SMILES', 'mol.id':'CompoundIndex'}, inplace=True)
-
     # Define columns for analysis and threshold for filtering
     effect_size_columns = [f'{x} Effect Size' for x in ['A', 'A-inh', 'D', 'D-inh', 'blank']]
     counts_columns = [f'{l} counts' for l in ['A', 'A-inh', 'D', 'D-inh', 'blank']]
     relevant_columns = ['CompoundIndex', 'SMILES', 'library.name'] + effect_size_columns + counts_columns
     count_thresh = config['count_threshold']
     blank_effect_size_thresh = config['blank_effect_size_threshold']
-
+    print("")
     # Filter data
     print('Filtering data...')
     df_CK1a = filtering(molecular_enrichments_df, 'CK1a', count_thresh, blank_effect_size_thresh, relevant_columns)
     df_CK1a_inh = filtering(molecular_enrichments_df, 'CK1a-inh', count_thresh, blank_effect_size_thresh, relevant_columns)
     df_CK1d = filtering(molecular_enrichments_df, 'CK1d', count_thresh, blank_effect_size_thresh, relevant_columns)
     df_CK1d_inh = filtering(molecular_enrichments_df, 'CK1d-inh', count_thresh, blank_effect_size_thresh, relevant_columns)
-
+    print("")
     # Stratify data into three major categories: Allosteric, Orthosteric, and Cryptic
     # The purpose of CK1x exclusive competitive is unclear. feel free to leave them out
     print('Stratifying data...')
@@ -102,10 +101,14 @@ if __name__ == '__main__':
     if not os.path.exists(output_path_stratified):
         os.makedirs(output_path_stratified)
 
+    df_CK1a.to_csv(os.path.join(output_path_stratified, 'CK1a_filtered.csv'), index=False)
+    df_CK1a_inh.to_csv(os.path.join(output_path_stratified, 'CK1a_inh_filtered.csv'), index=False)
     df_CK1a_all_labels.to_csv(os.path.join(output_path_stratified, 'CK1a_all_labels.csv'), index=False)
     df_CK1a_orthosteric.to_csv(os.path.join(output_path_stratified, 'CK1a_orthosteric.csv'), index=False)
     df_CK1a_exclusive_competitive.to_csv(os.path.join(output_path_stratified, 'CK1a_exclusive_competitive.csv'), index=False)
 
+    df_CK1d.to_csv(os.path.join(output_path_stratified, 'CK1d_filtered.csv'), index=False)
+    df_CK1d_inh.to_csv(os.path.join(output_path_stratified, 'CK1d_inh_filtered.csv'), index=False)
     df_CK1d_all_labels.to_csv(os.path.join(output_path_stratified, 'CK1d_all_labels.csv'), index=False)
     df_CK1d_orthosteric.to_csv(os.path.join(output_path_stratified, 'CK1d_orthosteric.csv'), index=False)
     df_CK1d_exclusive_competitive.to_csv(os.path.join(output_path_stratified, 'CK1d_exclusive_competitive.csv'), index=False)
