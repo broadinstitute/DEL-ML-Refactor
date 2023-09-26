@@ -1,0 +1,5 @@
+CompoundIndex,SMILES,library.name,A Effect Size,A-inh Effect Size,D Effect Size,D-inh Effect Size,blank Effect Size,A counts,A-inh counts,D counts,D-inh counts,blank counts,customlabel
+DEL0001-0001-0001-1058,CNC(=O)CN1CCN(C(C)C)CC1,DEL0001,13.271617167408204,-0.1,11.038287974067414,72.0853160259924,-0.1,3.0,0.0,3.0,15.0,0.0,Orthosteric
+DEL0001-0001-0001-0959,CNC(=O)C1CC1C,DEL0001,31.26353610165392,-0.1,-0.1,-0.1,-0.1,7.0,0.0,0.0,0.0,0.0,Orthosteric
+DEL0001-0001-0001-0900,CNC(=O)CN(C)S(=O)(=O)c1ccc(F)cc1,DEL0001,13.271617167408204,-0.1,-0.1,-0.1,-0.1,3.0,0.0,0.0,0.0,0.0,Orthosteric
+DEL0001-0001-0001-0623,CNC(=O)CC1C(=O)N(C)C(=O)N1C,DEL0001,31.26353610165392,-0.1,-0.1,-0.1,-0.1,7.0,0.0,0.0,0.0,0.0,Orthosteric
