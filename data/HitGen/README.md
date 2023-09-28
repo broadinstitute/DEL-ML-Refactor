@@ -41,3 +41,7 @@ The script will generate the plots for each experiment condition (except the las
   - The effective size of binder of interested (orthosteric) for CK1d and CK1a (i.e., experiment of interest)
 
 All the output files are stored under `output/lib_stat`.
+
+
+## TODO
+- [ ] Same issues. please refer to TODO section in DOS-DEL [README](https://github.com/broadinstitute/DEL-ML-Refactor/blob/main/data/DOS-DEL/README.md)
