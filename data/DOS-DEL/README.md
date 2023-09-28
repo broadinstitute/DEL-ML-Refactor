@@ -58,13 +58,11 @@ The script will generate the plots for each experiment condition (except the las
 All the output files are stored under `output/lib_stat`.
 
 ## TODO
-Higher priority
+- [ ] As reflected in the issue log, The [merge](https://github.com/broadinstitute/DEL-ML-Refactor/blob/6d81c047161e7b2f679352e3ae29a40d7db69b6c/data/DOS-DEL/stratify.py#L29) in label generation function use relevant columns to ensure there is no duplidcate, which is pretty dirty. Refactor it by de-duplicate first then use primary key to join (i.e., SMILES)
+- [ ] Consider to move some hardcoded variable in the code to `config.yaml`
 - [x] Sorting out the missing code piece that produce effective size fileds in DOS-DEL (Sumaiya and Kuan)
 - [x] Split exploratory analysis from DOS-DEL-Analysis.ipynb
 - [x] Split stratify from DOS-DEL-Analysis.ipynb
-
-Lower priority
-- [ ] Explore potential data format (e.g., parquet, cudf) that speeds up the whole preprocessing pipeline. (Kuan)
 
 ## Refactoring issue log
 - 06/21/2023:  Found the supposed primary key (CompoundIndex) is a fake primary key. This issue is highly likely to affect the subsequent analysis since the binder type are stratified by CompoundIndex. The current repo already uses SMILE as PK instead. 
