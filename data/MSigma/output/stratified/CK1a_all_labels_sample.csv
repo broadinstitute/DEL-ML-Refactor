@@ -1,0 +1,5 @@
+CompoundIndex_x,SMILES,Sample_x,ZScore_A,CompoundIndex_y,Sample_y,ZScore_A_inh,customlabel,CompoundIndex,Sample
+9665069.0,CS(=O)CC[C@H](N)C(=O)NC1(C(=O)NCC(CC(=O)O)c2ccc(Cl)cc2)CCCCCC1,Sigma-A,17.47287761,9665069.0,Sigma-A-inh,13.2269079,Allosteric,,
+10881539.0,N[C@@H](Cc1cccc([N+](=O)[O-])c1)C(=O)NC1(C(=O)NCC(CC(=O)O)c2ccc(Cl)cc2)CCCCCC1,Sigma-A,17.37267097,10881539.0,Sigma-A-inh,17.79442382,Allosteric,,
+9506401.0,O=C(O)CC(CNC(=O)C1(NC(=O)C2NCCS2)CCCCCC1)c1ccc(Cl)cc1,Sigma-A,15.96977807,9506401.0,Sigma-A-inh,14.36878688,Allosteric,,
+9876629.0,O=C(O)CC(CNC(=O)C1(NC(=O)C2NCCc3ccccc32)CCCCCC1)c1ccc(Cl)cc1,Sigma-A,15.7693648,9876629.0,Sigma-A-inh,14.2736303,Allosteric,,

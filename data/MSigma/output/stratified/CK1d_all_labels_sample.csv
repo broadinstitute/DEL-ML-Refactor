@@ -1,0 +1,5 @@
+CompoundIndex_x,SMILES,Sample_x,ZScore_D,CompoundIndex_y,Sample_y,ZScore_D_inh,customlabel,CompoundIndex,Sample
+10177392.0,CC(CCc1ccc(O)cc1)(NC(=O)c1ccc(N)cc1Cl)C(=O)N[C@@H](Cc1ccc(C(C)(C)C)cc1)C(=O)O,Sigma-D,46.48074958,10177392.0,Sigma-D-inh,16.833817,Allosteric,,
+9701382.0,COc1ccc(N)cc1C(=O)NC(C)(CCc1ccc(O)cc1)C(=O)N[C@@H](Cc1ccc(C(C)(C)C)cc1)C(=O)O,Sigma-D,41.95719898,9701382.0,Sigma-D-inh,15.91273005,Allosteric,,
+10759115.0,CCc1ccc(C(NC(=O)C(C)(CCc2ccc(O)cc2)NC(=O)C[C@H](N)CCSC)C(=O)O)cc1,Sigma-D,26.97922031,10759115.0,Sigma-D-inh,13.40067471,Allosteric,,
+128462.0,CCc1ccc(C(NC(=O)C(C)(CCc2ccc(O)cc2)NC(=O)C[C@@H](N)c2cccc(OC)c2OC)C(=O)O)cc1,Sigma-D,26.17503354,128462.0,Sigma-D-inh,13.56814507,Allosteric,,

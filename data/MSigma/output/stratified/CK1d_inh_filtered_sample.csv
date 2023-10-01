@@ -1,0 +1,5 @@
+CompoundIndex,SMILES,Sample,ZScore_D_inh
+10775759,CSCC[C@@H](N)CC(=O)NC1(C(=O)NCC(CC(=O)O)c2ccc(Cl)cc2)CCCCCC1,Sigma-D-inh,20.09948893
+10828649,N[C@@H](Cc1ccccc1[N+](=O)[O-])C(=O)NC1(C(=O)NCC(CC(=O)O)c2ccc(Cl)cc2)CCCCCC1,Sigma-D-inh,17.83863913
+145106,COc1cccc([C@H](N)CC(=O)NC2(C(=O)NCC(CC(=O)O)c3ccc(Cl)cc3)CCCCCC2)c1OC,Sigma-D-inh,16.91755218
+10177392,CC(CCc1ccc(O)cc1)(NC(=O)c1ccc(N)cc1Cl)C(=O)N[C@@H](Cc1ccc(C(C)(C)C)cc1)C(=O)O,Sigma-D-inh,16.833817
