@@ -1,6 +1,7 @@
 import pandas as pd
 import copy
 import os
+import numpy as np
 import yaml
 
 def label_generation(df_exp, df_exp_inh, relevant_columns, exp_code):
@@ -50,6 +51,17 @@ if __name__ == "__main__":
     results_CK1a = label_generation(df_CK1a, df_CK1a_inh, ['SMILES'], 'CK1a')
     df_CK1a_all_labels = pd.concat([results_CK1a['Allosteric'], results_CK1a['Orthosteric'], results_CK1a['Cryptic']])
     df_CK1a_orthosteric = results_CK1a['Orthosteric']
+    print("Generating CK1a positive label by merging part of allosteric and orthosteric")
+    df_common_CK1a_and_inh = df_CK1a.merge(df_CK1a_inh, how='inner', on=['SMILES'])
+    df_common_CK1a_and_inh['customlabel'] = 'common_CK1a_CK1aInh'
+    df_common_CK1a_and_inh['ZScore'] = df_common_CK1a_and_inh[['ZScore_A']]
+    df_common_CK1a_and_inh['competitive'] = np.where((df_common_CK1a_and_inh['ZScore_A'] > df_common_CK1a_and_inh['ZScore_A_inh']), 'CK1a_common_competitive_to_inh', 'CK1a_common_non_competitive_to_inh')
+    df_common_competitive_CK1a_to_inh = df_common_CK1a_and_inh.loc[df_common_CK1a_and_inh['competitive'] == 'CK1a_common_competitive_to_inh']
+    df_common_competitive_CK1a_to_inh = df_common_competitive_CK1a_to_inh.reset_index(drop=True)
+    df_common_competitive_CK1a_to_inh = df_common_competitive_CK1a_to_inh[["CompoundIndex_x", "SMILES", "Sample_x", "ZScore_A"]]
+    df_common_competitive_CK1a_to_inh = df_common_competitive_CK1a_to_inh.rename({'CompoundIndex_x':'CompoundIndex','Sample_x': 'Sample'}, axis=1)
+    df_CK1a_positive = pd.concat([results_CK1a['Orthosteric'], df_common_competitive_CK1a_to_inh], axis=0)
+    print("Total compounds common between CK1d and CK1d+inh but competitive to CK1a", len(df_common_competitive_CK1a_to_inh))
     print("")
 
     df_CK1d = copy.deepcopy(df_all.loc[df_all["Sample"] == "Sigma-D"])
@@ -59,6 +71,17 @@ if __name__ == "__main__":
     results_CK1d = label_generation(df_CK1d, df_CK1d_inh, ['SMILES'], 'CK1d')
     df_CK1d_all_labels = pd.concat([results_CK1d['Allosteric'], results_CK1d['Orthosteric'], results_CK1d['Cryptic']])
     df_CK1d_orthosteric = results_CK1d['Orthosteric']
+    print("Generating CK1d positive label by merging part of allosteric and orthosteric")
+    df_common_CK1d_and_inh = df_CK1d.merge(df_CK1d_inh, how='inner', on=['SMILES'])
+    df_common_CK1d_and_inh['customlabel'] = 'common_CK1d_CK1dInh'
+    df_common_CK1d_and_inh['ZScore'] = df_common_CK1d_and_inh[['ZScore_D']]
+    df_common_CK1d_and_inh['competitive'] = np.where((df_common_CK1d_and_inh['ZScore_D'] > df_common_CK1d_and_inh['ZScore_D_inh']), 'CK1d_common_competitive_to_inh', 'CK1d_common_non_competitive_to_inh')
+    df_common_competitive_CK1d_to_inh = df_common_CK1d_and_inh.loc[df_common_CK1d_and_inh['competitive'] == 'CK1d_common_competitive_to_inh', ]
+    df_common_competitive_CK1d_to_inh = df_common_competitive_CK1d_to_inh.reset_index(drop=True)
+    df_common_competitive_CK1d_to_inh = df_common_competitive_CK1d_to_inh[["CompoundIndex_x", "SMILES", "Sample_x", "ZScore"]]
+    df_common_competitive_CK1d_to_inh = df_common_competitive_CK1d_to_inh.rename({'CompoundIndex_x':'CompoundIndex', 'Sample_x': 'Sample'}, axis=1)
+    df_CK1d_positive = pd.concat([results_CK1d['Orthosteric'], df_common_CK1d_and_inh], axis=0)
+    print("Total compounds common between CK1d and CK1d+inh but competitive to CK1d", len(df_common_competitive_CK1d_to_inh))
 
     # Following the naming convention of other two libraries (HitGen and DOS-DEL),
     # We append a filtered suffix to the file name but there is no filtering happens in MSigma
@@ -66,8 +89,10 @@ if __name__ == "__main__":
     df_CK1a_inh.to_csv(os.path.join(output_path_stratified, 'CK1a_inh_filtered.csv'), index=False)
     df_CK1a_all_labels.to_csv(os.path.join(output_path_stratified, 'CK1a_all_labels.csv'), index=False)
     df_CK1a_orthosteric.to_csv(os.path.join(output_path_stratified, 'CK1a_orthosteric.csv'), index=False)
+    df_CK1a_positive.to_csv(os.path.join(output_path_stratified, 'CK1a_positive.csv'), index=False)
 
     df_CK1d.to_csv(os.path.join(output_path_stratified, 'CK1d_filtered.csv'), index=False)
     df_CK1d_inh.to_csv(os.path.join(output_path_stratified, 'CK1d_inh_filtered.csv'), index=False)
     df_CK1d_all_labels.to_csv(os.path.join(output_path_stratified, 'CK1d_all_labels.csv'), index=False)
     df_CK1d_orthosteric.to_csv(os.path.join(output_path_stratified, 'CK1d_orthosteric.csv'), index=False)
+    df_CK1d_positive.to_csv(os.path.join(output_path_stratified, 'CK1d_positive.csv'), index=False)
