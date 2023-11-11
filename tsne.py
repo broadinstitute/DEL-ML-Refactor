@@ -1,4 +1,3 @@
-#from tsnecuda import TSNE
 from sklearn.manifold import TSNE
 import numpy as np
 import time
@@ -8,24 +7,18 @@ import os
 import pickle
 import argparse
 np.random.seed(0)
-# X = np.random.randn(2000000,2048)
-# t_start = time.time()
-# X_embedded = TSNE(n_components=2, n_jobs=-1).fit_transform(X)
-# print('Time elapsed: {} seconds'.format(time.time()-t_start))
-# print(X_embedded.shape)
-# print(X_embedded[:10,:])
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--input_folder", type=str, required=True, help="folder to store features to be reduced")
     parser.add_argument("--experiment", type=str, required=True, help="experiment name")
     args = parser.parse_args()
-    experiment = args.experiment
 
     data_len = []
     data = []
     print("Loading data...")
-    for file in glob.glob("./Erics_deloutput/fingerprint/*/*.h5"):
-        if experiment in file or 'broad_cp_140k' in file or 'negative' in file:
+    for file in glob.glob(os.path.join(args.input_folder, "*.h5")):
+        if args.experiment in file or 'broad_cp_140k' in file or 'negative' in file:
             print(file)
             file_name = os.path.basename(file).replace(".h5", "")
             lib_name = os.path.basename(os.path.dirname(file))
@@ -41,8 +34,8 @@ if __name__ == "__main__":
     print('Time elapsed: {} seconds'.format(time.time()-t_start))
 
     print("Saving data...")
-    with open(f"data_embedded_{experiment}.pkl", "wb") as f:
+    with open(f"data_embedded_{args.experiment}.pkl", "wb") as f:
         pickle.dump(data_embedded, f)
-    with open(f"data_embedded_meta_{experiment}.pkl", "wb") as f:
+    with open(f"data_embedded_meta_{args.experiment}.pkl", "wb") as f:
         pickle.dump(data_len, f)
 
