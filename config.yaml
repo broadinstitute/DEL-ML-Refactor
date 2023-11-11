@@ -1,0 +1,6 @@
+num_processes: 4
+radius: 2
+nBits: 2048
+chunk_size: 50000
+useChirality: True
+
