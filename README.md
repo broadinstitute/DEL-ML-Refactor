@@ -1,7 +1,5 @@
 # DEL-ML-Refactor
 
-TODO
-- [x] Refactor pre-ML stage of HitGen
-- [x] Refactor pre-ML stage of M-Sigma
-- [ ] Replace fingerprint.py with a more general feature extractor by molfeat
-- [x] DOS-DEL pre-ML stage refactor
+Done for public release. The only thing left is to check what sensitive data should be removed in the public version, write the README, and test the whole repo based on the README 
+
+
