@@ -6,7 +6,7 @@ This repository contains pretrained models and scripts used for prediction menti
 
 ## Pre-requisites:
 - Linux (Tested on Ubuntu 22.04)
-- NVIDIA GPU (optional, tested on NVIDIA RTX A6000 with cuda version 12.1)
+- NVIDIA GPU (Tested on NVIDIA RTX A6000 with cuda version 12.1)
 - Python (3.10)
 - Tensorflow (2.14)
 - chemprop (1.6.1)
