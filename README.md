@@ -6,13 +6,16 @@ This repository contains pretrained models and scripts used for prediction menti
 
 ## Pre-requisites:
 - Linux (Tested on Ubuntu 22.04)
-- NVIDIA GPU (optional, tested on NVIDIA RTX A6000)
+- NVIDIA GPU (optional, tested on NVIDIA RTX A6000 with cuda version 12.1)
 - Python (3.10)
-Please refer to installation guide for more details'
+- Tensorflow (2.14)
+- chemprop (1.6.1)
+- RDkit (2023.9.2)
+- Pytorch (2.1.1)
+  
+Please refer to [installation](docs/INSTALLATION.md) guide for how to set up the working environment
 
-## Installation guide
-- Installation guide (GPU)
-- Installation guide (CPU-only)
+
 
 ## Step 0: Data preparation
 Prepare your data in the format like `example/compound.csv`. In Summary, you can combine any metada of compounds but there must be a column named **SMILES**. We will use `compound.csv` as example to demonstrate the usage of other scripts
