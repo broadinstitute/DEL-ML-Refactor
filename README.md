@@ -18,7 +18,7 @@ Please refer to [installation](docs/INSTALLATION.md) guide for how to set up the
 
 
 ## Step 0: Data preparation
-Prepare your data in the format like `example/compound.csv`. In Summary, you can combine any metada of compounds but there must be a column named **SMILES**. We will use `compound.csv` as example to demonstrate the usage of other scripts
+Prepare your data in the format like `example/compound.csv`. In summary, you can combine any metada of compounds but there must be a column named **SMILES**. We will use `compound.csv` as example to demonstrate the usage of other scripts
 
 
 ## Step 1: Feature extraction
