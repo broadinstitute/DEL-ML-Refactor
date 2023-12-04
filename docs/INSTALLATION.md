@@ -5,7 +5,8 @@ Please make sure your NVIDIA GPU and cuda toolkit are properly intalled and conf
 
 First, create a conda environment with RDkit pre-installed
 ```
-conda create -c conda-forge -n del-ml-gpu-test rdkit
+conda create -c conda-forge -n del-ml-gpu rdkit
+conda activate del-ml-gpu
 ```
 Then simply using the `environment_gpu.yml` in to set up the environment
 ```
