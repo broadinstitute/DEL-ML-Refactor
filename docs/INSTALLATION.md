@@ -7,7 +7,7 @@ First, create a conda environment with RDkit pre-installed
 ```
 conda create -c conda-forge -n del-ml-gpu-test rdkit
 ```
-Then simply using the `environment.yml` in to set up the environment
+Then simply using the `environment_gpu.yml` in to set up the environment
 ```
 conda env create --name del-ml-gpu -f ./environment_gpu.yml
 ```
