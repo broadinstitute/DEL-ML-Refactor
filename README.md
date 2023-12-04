@@ -27,6 +27,7 @@ Feel free to customized the `--save_path` and `--experiment` flag to suit your n
 
 ## Step 2: Binder/Non-binder Prediction
 We released the best two type of models (MLP and GNN) in each DEL librabry. Simply run
+### MLP
 ```
 python prediction.py --input_file ./example/compound.h5 --save_path ./example/ --experiment compound --checkpoint ./data/HitGen/models/CK1a/MLP.keras
 ```
@@ -36,6 +37,13 @@ We do not use gpu by default as we observe it does not provide a clear speed up.
 python prediction.py --input_file ./example/compound.h5 --save_path ./example/ --experiment compound --checkpoint ./data/HitGen/models/CK1a/MLP.keras --use_gpu
 ```
 Note that we do not see a clear speed up of using GPU (it is somtimes slower). We believe the reason is the overhead of moving data from CPU to GPU dominates the speed up of very small model (our case).
+
+### GNN
+We use the graph neural network (GNN) implemented in chemprop. Following the [chemprop instruction](https://github.com/chemprop/chemprop#predicting),  run
+```
+chemprop_predict --smiles_columns SMILES --test_path ./example/compound.csv --checkpoint_path data/HitGen/models/CK1a/chemprop.pt --preds_path ./example/compound_prediction.csv
+```
+The above command uses the GNN models pretrained on HitGen CK1a molecules to predict how likely the molecules in the `example/compound.csv` are binders.
 
 ## t-SNE visualization
 After **Step 1**, you can run the following script to visualize the high dimension data in 2d space
