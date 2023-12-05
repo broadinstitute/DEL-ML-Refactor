@@ -32,13 +32,13 @@ Feel free to customized the `--save_path` and `--experiment` flag to suit your n
 We released the best two type of models (MLP and GNN) in each DEL librabry. Simply run
 ### Multi-layer perceptron (MLP)
 ```
-python prediction.py --input_file ./example/compound.h5 --save_path ./example/ --experiment compound_pred_mlp --checkpoint ./data/HitGen/models/CK1a/MLP.keras
+python prediction.py --input_file ./example/compound_feature.h5 --save_path ./example/ --experiment compound_pred_mlp --checkpoint ./data/HitGen/models/CK1a/MLP.keras
 ```
 The above command uses the MLP models pretrained on HitGen CK1a molecules to predict how likely the molecules in the `example/compound.csv` are binders.
 
 We do not use gpu by default as we observe it does not provide a clear speed up. We believe the reason is the overhead of moving data from CPU to GPU dominates the speed up of very small model (our case). If you want to run on GPU, add `--use_gpu` flag:
 ```
-python prediction.py --input_file ./example/compound.h5 --save_path ./example/ --experiment compound_pred_mlp --checkpoint ./data/HitGen/models/CK1a/MLP.keras --use_gpu
+python prediction.py --input_file ./example/compound_feature.h5 --save_path ./example/ --experiment compound_pred_mlp --checkpoint ./data/HitGen/models/CK1a/MLP.keras --use_gpu
 ```
 
 
