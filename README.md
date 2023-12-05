@@ -50,10 +50,16 @@ chemprop_predict --smiles_columns SMILES --test_path ./example/compound.csv --ch
 The above command uses the GNN models pretrained on HitGen CK1a molecules to predict how likely the molecules in the `example/compound.csv` are binders.
 
 ## t-SNE visualization
-After **Step 1**, you can run the following script to visualize the high dimension data in 2d space
+After **Step 1**, you can run the following script to visualize the high dimension data in 2d space:
 ```
-python tsne.py --input_folder ./example --experiment compound --save_path ./example
+python tsne.py --input_file ./example/compound.h5 --save_path ./example/ --experiment compound --perplexity 2
 ```
+By default, we set `n_jobs=-1` (i.e., Using all CPUs in the computer). Note `perplexity=2` in the above script is just for this deom dataset. The default value used here is `perplexity=30`. You may need to tune this parameter to fit your dataset by running:
+```
+python tsne.py --input_file ./example/compound.h5 --save_path ./example/ --experiment compound --perplexity YOUR_VALUE
+```
+
+Regarding the best practice to use t-SNE and more dicussions about the method, we recommend user to read this [blog post](https://distill.pub/2016/misread-tsne/) and this [video](https://www.youtube.com/watch?v=CsUqmug7ZMc)
 
 
 
