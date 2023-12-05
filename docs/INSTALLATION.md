@@ -4,7 +4,7 @@ Please make sure your NVIDIA GPU and cuda toolkit are properly intalled and conf
 
 Once GPU, cuda and conda are properly configured and installed, simply run the following to set up and activate the environment:
 ```
-conda env create --name del-ml-gpu -f ./environment_gpu.yml
+conda env create --name del-ml-gpu -f ./docs/environment_gpu.yml
 conda activate del-ml-gpu
 ```
 Note: This step could take 20 to 30 mins to complete
