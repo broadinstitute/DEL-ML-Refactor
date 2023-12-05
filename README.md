@@ -24,9 +24,9 @@ Prepare your data in the format like `example/compound.csv`. In summary, you can
 ## Step 1: Feature extraction
 In our paper, we use Morgan Fingerprint from RDkit with `nbits=2048, radius=2, useChirality=True`. Simply run
 ```
-python feature_extractor.py --input_file ./example/compound.csv --save_path ./example/ --experiment compound
+python feature_extractor.py --input_file ./example/compound.csv --save_path ./example/ --experiment compound_feature
 ```
-Feel free to customized the `--save_path` and `--experiment` flag to suit your need. For simplicity, we save the extracted feature to the same folder and call it compound
+Feel free to customized the `--save_path` and `--experiment` flag to suit your need. For simplicity, we save the extracted feature to the same folder and call it compound feature
 
 ## Step 2: Binder/Non-binder Prediction
 We released the best two type of models (MLP and GNN) in each DEL librabry. Simply run
