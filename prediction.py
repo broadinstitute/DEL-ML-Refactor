@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser.add_argument("--save_path", type=str, required=True, help="path to store results")
     parser.add_argument("--checkpoint", type=str, required=True, help="model chekcpoint")
     parser.add_argument("--experiment", type=str, required=True, help="experiment name")
-    parser.add_argument("--use_gpu", type=bool, default=False, help="use gpu")
+    parser.add_argument("--use_gpu", action='store_true', default=False, help="use gpu")
     args = parser.parse_args()
     if not args.use_gpu:
         os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
