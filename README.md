@@ -50,6 +50,19 @@ chemprop_predict --smiles_columns SMILES --test_path ./example/compound.csv --ch
 ```
 The above command uses the GNN models pretrained on HitGen CK1a molecules to predict how likely the molecules in the `example/compound.csv` are binders.
 
+
+### Output
+Here is the output format of the prediction
+```
+SMILES,prediction:
+CCN1CCCC1Cn1cnc2c3ccc(OC)cc3nc-2c1O,0.678
+CCC1(c2ccccc2)CC(=O)C(C2CC(c3ccc(OCc4ccc(C(F)(F)F)cc4)cc3)Cc3ccccc32)=C(O)O1,0.111
+CCOC(=O)C(C)(OC(C)=O)c1cc(C)c(/N=C/N(C)C)c(C)c1,0.281
+Cc1cc(C)n2s/c(=N\C(=O)C(c3ccc(Cl)cc3)C(C)C)nc2n1,0.112
+OC1=C(Cl)/C(=N\Cc2ccccc2)C(O)O1,0.342
+```
+It is a .csv file that contain the prediction score from model output of each molecule. 
+
 ## t-SNE visualization
 After **Step 1**, you can run the following script to visualize the high dimension data in 2d space:
 ```
