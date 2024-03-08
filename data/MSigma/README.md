@@ -24,6 +24,6 @@ Simply run:
 ```
 python ./statistics.py
 ```
-Since there is no filtering and sublibrary in MSigma, it only generates the quantile tables of Zscore for the whole library and Zscore plot for CK1a and CK1d.
+Since there is no filtering and sublibrary in MSigma, it only generates the quantile tables of Zscore for the whole library and Zscore plot for CK1a and CK1d. If you just want to reproduce the figure in this step, please just run this step directly from `/home/unix/chengkua/project/DEL-ML-Refactor_dev/data/MSigma` in workstation (gpbd5-975). Due to the large file size, the files used to generate figures is not uploaded here
 
 All the output files are stored under `output/lib_stat`.
