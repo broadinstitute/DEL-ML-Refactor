@@ -40,7 +40,8 @@ The script will generate the plots for each experiment condition (except the las
   - The quantile table of effective size in the whole library under different filtering condition (before filtering, after filtering by effective size and after filtering by counts)
   - The effective size of binder of interested (orthosteric) for CK1d and CK1a (i.e., experiment of interest)
 
-All the output files are stored under `output/lib_stat`.
+All the output files are stored under `output/lib_stat`. If you just want to reproduce the figure in this step, please just run this step directly from `/home/unix/chengkua/project/DEL-ML-Refactor/data/HitGen` in workstation (gpbd5-975). Due to the large file size, the files used to generate figures is not uploaded here
+
 
 
 ## TODO
