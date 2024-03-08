@@ -55,7 +55,7 @@ The script will generate the plots for each experiment condition (except the las
   - The quantile table of enrichment ratio and its lower bound for each
   - The enrichment ratio and its lower bound of binder of interested (orthosteric) for CK1d and CK1a (i.e., experiment we are interested in)
 
-All the output files are stored under `output/lib_stat`.
+All the output files are stored under `output/lib_stat`. If you just want to reproduce the figure in this step, please just run this step directly from /home/unix/chengkua/project/DEL-ML-Refactor_dev/data/DOS-DEL in workstation (gpbd5-975). Due to the large file size, the files used to generate figures is not uploaded here
 
 ## TODO
 - [ ] As reflected in the issue log, The [merge](https://github.com/broadinstitute/DEL-ML-Refactor/blob/6d81c047161e7b2f679352e3ae29a40d7db69b6c/data/DOS-DEL/stratify.py#L29) in label generation function use relevant columns to ensure there is no duplidcate, which is pretty dirty. Refactor it by de-duplicate first then use primary key to join (i.e., SMILES)
