@@ -1,7 +1,6 @@
 DEL+ML paradigm for finding actionable discovery – a cross DEL and cross ML model assessment
 ====
-Abstract:
-"Link: To be added"
+Preprint: [DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment](https://chemrxiv.org/engage/chemrxiv/article-details/66a05468c9c6a5c07aae574d).
 
 This repository contains pretrained models and scripts used for prediction mentioned in the paper (link)
 
