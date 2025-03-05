@@ -1,8 +1,10 @@
 DEL+ML paradigm for finding actionable discovery – a cross DEL and cross ML model assessment
 ====
-Preprint: [DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment](https://chemrxiv.org/engage/chemrxiv/article-details/66a05468c9c6a5c07aae574d).
+Preprint: Iqbal S*, Jiang W, Hansen E, Aristotelous T, Liu S, Reidenbach A, et al. DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment. ChemRxiv. 2024; doi:10.26434/chemrxiv-2024-2xrx4 This content is a preprint and has not been peer-reviewed.
 
-This repository contains pretrained models and scripts used for prediction mentioned in the paper (link)
+Published paper: Iqbal S*, Jiang W, Hansen E, Aristotelous T, Liu S, Reidenbach A, et al. DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment. NPJ Drug Discovery (accepted). Feb 2025.
+
+This repository contains pretrained models and scripts used for prediction mentioned in the paper. If you find our work useful in your research or if you use parts of this code, please cite our paper.
 
 ## Pre-requisites:
 - Linux (Tested on Ubuntu 22.04)
@@ -73,11 +75,6 @@ python tsne.py --input_file ./example/compound.h5 --save_path ./example/ --exper
 ```
 
 Regarding the best practice to use t-SNE and more dicussions about the method, we recommend users to read this [blog post](https://distill.pub/2016/misread-tsne/) and this [video](https://www.youtube.com/watch?v=CsUqmug7ZMc)
-
-## Reference
-If you find our work useful in your research or if you use parts of this code please consider citing our paper:
-
-Author list, Paper Title, Journal, Year. Paper link
 
 
 
