@@ -1,10 +1,10 @@
 DEL+ML paradigm for finding actionable discovery – a cross DEL and cross ML model assessment
 ====
-Preprint: Iqbal S*, Jiang W, Hansen E, Aristotelous T, Liu S, Reidenbach A, et al. DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment. ChemRxiv. 2024; doi:10.26434/chemrxiv-2024-2xrx4 This content is a preprint and has not been peer-reviewed.
+Preprint: **Iqbal S***, Jiang W, Hansen E, Aristotelous T, Liu S, Reidenbach A, et al. **DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment**. ChemRxiv. 2024; doi:10.26434/chemrxiv-2024-2xrx4 This content is a preprint and has not been peer-reviewed.
 
-Published paper: Iqbal S*, Jiang W, Hansen E, Aristotelous T, Liu S, Reidenbach A, et al. DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment. NPJ Drug Discovery (accepted). Feb 2025.
+Published paper: **Iqbal S***, Jiang W, Hansen E, Aristotelous T, Liu S, Reidenbach A, et al. **DEL+ML paradigm for actionable hit discovery – a cross DEL and cross ML model assessment**. _NPJ Drug Discovery (accepted)_. Feb **2025**.
 
-This repository contains pretrained models and scripts used for prediction mentioned in the paper. If you find our work useful in your research or if you use parts of this code, please cite our paper.
+This repository contains pretrained models and scripts used for prediction mentioned in the paper. If you find our work useful in your research or if you use parts of this code, please cite our paper. Contact: <sumaiya@broadinstitute.org>.
 
 ## Pre-requisites:
 - Linux (Tested on Ubuntu 22.04)
