@@ -19,6 +19,8 @@ Please refer to [installation](docs/INSTALLATION.md) guide for how to set up the
 
 ## Raw data: 
 - HitGen OpenDEL screening results - raw counts and effectsize ("data/HitGen/raw/DEL_screening_result_HitGen_rawcounts_effectsize_part_.csv.zip")
+- Column names:
+- A: CK1-alpha, A-inh: CK1-alpha+inhibitor, D: CK1-delta, D-inh: CK1-delta+inhibitor, blank: no protein
 
 ## Step 0: Data preparation
 Prepare your data in the format like `example/compound.csv`. In summary, you can combine any metada of compounds but there must be a column named **SMILES**. We will use `compound.csv` as example to demonstrate the usage of other scripts
